@@ -12,8 +12,8 @@ namespace aspnetcoreapp
             app.Run(async context =>
             {
                 count++;
-                var html = count.ToString("D");
-                html = @"<html><head></head><body><h3>Hello from ASP.NET Core! " + html;
+                var cnt = count.ToString("D");
+                var html = @"<html><head></head><body><h3>Hello from ASP.NET Core! app version 0.3 " + cnt;
                 html = html + @"</h3></body></html>";
                 context.Response.ContentType = "text/html";
                 await context.Response.WriteAsync(html);
