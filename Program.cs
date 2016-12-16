@@ -7,10 +7,10 @@ namespace aspnetcoreapp
     {
         public static void Main(string[] args)
         {
-            //Console.WriteLine("Hello World!");
             var host = new WebHostBuilder()
             .UseKestrel()
             .UseStartup<Startup>()
+            .UseUrls("http://0.0.0.0:5000")
             .Build();
 
             host.Run();
